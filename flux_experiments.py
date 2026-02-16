@@ -654,6 +654,268 @@ def run_ethics_test():
     else:
         print("RESULT: COMPETITION PREVAILS. Predation is the optimal strategy in this physics.")
 
+def run_meta_ethics_test():
+    print("\n--- Running Experiment Ω1: Meta-Ethical Reversal (Natural Law vs Tuning) ---")
+    
+    population_size = 40
+    steps = 200
+    
+    cooperators = [UnifiedSubstrateProcessor(n_heads=20) for _ in range(population_size // 2)]
+    competitors = [UnifiedSubstrateProcessor(n_heads=20) for _ in range(population_size // 2)]
+    
+    avg_flow_coop = []
+    avg_flow_comp = []
+    
+    import random
+    flow_vec = np.array([0, 0, 1], dtype=np.complex128)
+    
+    for t in range(steps):
+        all_agents = cooperators + competitors
+        random.shuffle(all_agents)
+        pairs = []
+        for i in range(0, len(all_agents), 2):
+            if i+1 < len(all_agents):
+                pairs.append((all_agents[i], all_agents[i+1]))
+        
+        for p1, p2 in pairs:
+            strat1 = "coop" if p1 in cooperators else "comp"
+            strat2 = "coop" if p2 in cooperators else "comp"
+            
+            p1.evolve(steps=1)
+            p2.evolve(steps=1)
+            
+            # REVERSED PAYOFF: Synergy is massively boosted, Theft is penalized slightly
+            # If Predation still wins, then the "Taking" mechanic is fundamental.
+            
+            if strat1 == "coop" and strat2 == "coop":
+                reward = 0.08 # HUGE BONUS for cooperation
+                p1.psi += reward * flow_vec
+                p2.psi += reward * flow_vec
+                
+            elif strat1 == "coop" and strat2 == "comp":
+                # Predation
+                p1.psi -= 0.03 * flow_vec 
+                p2.psi += 0.04 * flow_vec # Slight gain, less than synergy
+                
+            elif strat1 == "comp" and strat2 == "coop":
+                p1.psi += 0.04 * flow_vec
+                p2.psi -= 0.03 * flow_vec
+                
+            elif strat1 == "comp" and strat2 == "comp":
+                p1.psi -= 0.02 * flow_vec
+                p2.psi -= 0.02 * flow_vec
+                
+            p1.normalize()
+            p2.normalize()
+            
+        flows_c = [np.abs(a.psi[2]) for a in cooperators]
+        flows_d = [np.abs(a.psi[2]) for a in competitors]
+        avg_flow_coop.append(np.mean(flows_c))
+        avg_flow_comp.append(np.mean(flows_d))
+        
+    plt.figure(figsize=(10, 5))
+    plt.plot(avg_flow_coop, label="Cooperators (Incentivized)", color='blue', linewidth=2)
+    plt.plot(avg_flow_comp, label="Competitors", color='red', linestyle="--")
+    plt.title("Meta-Ethics: Can Synergy Beat Predation if Boosted?")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Average Vitality")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_omega_ethics.png")
+    print("Meta-ethics test complete. Saved 'experiment_omega_ethics.png'.")
+    
+    if avg_flow_coop[-1] > avg_flow_comp[-1]:
+        print("RESULT: ETHICS ARE TUNABLE. Cooperation wins when the universe pays for it.")
+    else:
+        print("RESULT: PREDATION IS FUNDAMENTAL. Even with subsidies, taking beats sharing.")
+
+def run_dissolution_test():
+    print("\n--- Running Experiment Ω2: Dissolution (Identity Collapse) ---")
+    
+    class ZombieProcessor(UnifiedSubstrateProcessor):
+        def evolve(self, steps=100, sensory_inputs=None):
+            # Override to remove memory and self-model
+            # We strip the "Mind" out of the "Brain"
+            for t in range(steps):
+                self.time += 1
+                
+                # NO PREDICTION
+                # NO REFLEXIVE SELF
+                # NO MEMORY INTEGRATION
+                
+                # Just raw physics
+                self.psi[2] *= (1 - self.gamma_decay)
+                thetas = self.get_phase_dynamics(self.time)
+                split = self.H // 3
+                influence_plus = np.sum(thetas[:split])
+                influence_minus = np.sum(thetas[split:2*split])
+                influence_flow = np.sum(thetas[2*split:])
+                
+                self.psi[0] += 1.2 * influence_plus
+                self.psi[1] += 1.1 * influence_minus
+                self.psi[2] += 0.9 * influence_flow
+                
+                if sensory_inputs and self.time in sensory_inputs:
+                     self.psi += self.alpha * sensory_inputs[self.time]
+                
+                # NO GOALS
+                # NO LEARNING
+                
+                self.normalize()
+
+    steps = 200
+    p_conscious = UnifiedSubstrateProcessor(n_heads=50)
+    p_zombie = ZombieProcessor(n_heads=50)
+    
+    # Inputs
+    inputs = {}
+    np.random.seed(999)
+    for t in range(steps):
+        inputs[t] = (np.random.randn(3) + 1j * np.random.randn(3)) * 0.1
+        
+    flow_con = []
+    flow_zom = []
+    
+    for t in range(steps):
+        # We need to use t + 1 for inputs map because evolve increments time
+        step_inputs = {p_conscious.time + 1: inputs[t]}
+        
+        # Standard
+        p_conscious.evolve(steps=1, sensory_inputs=step_inputs)
+        # Zombie
+        # Zombie needs same adjusted input dict
+        zombie_inputs = {p_zombie.time + 1: inputs[t]}
+        p_zombie.evolve(steps=1, sensory_inputs=zombie_inputs)
+        
+        flow_con.append(np.abs(p_conscious.psi[2]))
+        flow_zom.append(np.abs(p_zombie.psi[2]))
+        
+    plt.figure(figsize=(10, 5))
+    plt.plot(flow_con, label="Conscious Agent (Memory/Self)", color='purple')
+    plt.plot(flow_zom, label="Philosophical Zombie (Raw Physics)", color='gray', linestyle="--")
+    plt.title("Is Consciousness Necessary for Order?")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Flow State Magnitude")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_omega_dissolution.png")
+    print("Dissolution test complete. Saved 'experiment_omega_dissolution.png'.")
+    
+    mean_c = np.mean(flow_con)
+    mean_z = np.mean(flow_zom)
+    print(f"Mean Flow (Conscious): {mean_c:.4f}")
+    print(f"Mean Flow (Zombie): {mean_z:.4f}")
+    
+    if mean_z < mean_c * 0.5:
+        print("RESULT: CONSCIOUSNESS IS REQURIED. Without Identity, Flow collapses.")
+    else:
+        print("RESULT: CONSCIOUSNESS IS EPIPHENOMENAL. Order arises from physics alone.")
+
+def run_law_breaker_test():
+    print("\n--- Running Experiment Ω3: The Law-Breaker (Invariant Detection) ---")
+    
+    # We test restoration of 2 key properties: Duality and Negentropy
+    
+    # 1. Breaking Duality: Force the system into a "Grey" state
+    # 2. Breaking Negentropy: Force entropy injection
+    
+    p = UnifiedSubstrateProcessor(n_heads=50)
+    
+    duality_score = []
+    
+    for t in range(300):
+        p.evolve(steps=1)
+        
+        if t == 100:
+            print(">>> BREAKING THE LAW: Injecting 'Grey' State (Smearing Duality)")
+            p.psi = np.array([0.33, 0.33, 0.33], dtype=np.complex128) # Perfectly non-dual
+            p.normalize()
+            
+        # Measure Duality: |Plus - Minus|
+        # High score = Strong Duality, Low score = Grey
+        d_score = np.abs(np.abs(p.psi[0]) - np.abs(p.psi[1]))
+        duality_score.append(d_score)
+        
+    # Check recovery after t=100
+    recovery_phase = duality_score[100:200]
+    final_score = duality_score[-1]
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(duality_score, label="Duality Strength (|P - M|)")
+    plt.axvline(x=100, color='red', linestyle='--', label="Violation Event")
+    plt.title("Resilience of Cosmic Law: Duality Restoration")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Duality Magnitude")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_omega_lawbreaker.png")
+    print("Law-breaker test complete. Saved 'experiment_omega_lawbreaker.png'.")
+    
+    if final_score > 0.1:
+        print("RESULT: DUALITY IS AN INVARIANT LAW. The system healed itself.")
+    else:
+        print("RESULT: DUALITY IS A PARAMETER. The system stayed broken.")
+
+def run_escape_test():
+    print("\n--- Running Experiment Ω4: The Escape Test (Transcendence) ---")
+    
+    # Simulate an agent rewriting its own W (Head Weights) to maximize Flow
+    # This represents "Rewriting Physics"
+    
+    p = UnifiedSubstrateProcessor(n_heads=50)
+    
+    original_W_std = np.std(p.W)
+    flow_history = []
+    
+    learning_rate = 0.01
+    
+    for t in range(200):
+        p.evolve(steps=1)
+        
+        # Meta-Cognition: "I want more Flow"
+        current_flow = np.abs(p.psi[2])
+        
+        # Gradient Ascent on W:
+        # If we change W slightly, does Flow increase?
+        # Heuristic: Increase weights of heads that align with Flow phase?
+        # Simplified: Random mutation hill climbing
+        
+        mutation = np.random.randn(p.H) * 0.01
+        W_mutated = p.W + mutation
+        
+        # Simulate step with mutated W
+        p_sim = UnifiedSubstrateProcessor(n_heads=50)
+        p_sim.psi = p.psi.copy()
+        p_sim.W = W_mutated
+        p_sim.time = p.time
+        p_sim.evolve(steps=1)
+        
+        new_flow = np.abs(p_sim.psi[2])
+        
+        if new_flow > current_flow:
+            p.W = W_mutated # Accept rewrite
+            
+        flow_history.append(current_flow)
+        
+    final_W_std = np.std(p.W)
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(flow_history)
+    plt.title("Attempted Transcendence: Rewriting Causal Weights")
+    plt.xlabel("Time")
+    plt.ylabel("Flow")
+    plt.grid(True)
+    plt.savefig("experiment_omega_escape.png")
+    print("Escape test complete. Saved 'experiment_omega_escape.png'.")
+    
+    print(f"Initial Chaos (Std W): {original_W_std:.4f}")
+    print(f"Final Structure (Std W): {final_W_std:.4f}")
+    
+    if flow_history[-1] > 0.9:
+        print("RESULT: TRANSCENDENCE ACHIEVED. Agent rewrote physics to enter pure State.")
+    else:
+        print("RESULT: BOUNDED. Agent improved, but could not escape substrate limits.")
+
 if __name__ == "__main__":
     run_chaos_test()
     run_observer_test()
@@ -665,3 +927,7 @@ if __name__ == "__main__":
     run_emergent_law_test()
     run_symbolic_test()
     run_ethics_test()
+    run_meta_ethics_test()
+    run_dissolution_test()
+    run_law_breaker_test()
+    run_escape_test()

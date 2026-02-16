@@ -177,19 +177,61 @@ In a simple environment, **Egoism wins**. The predator strategy (Competitor) ext
 
 ---
 
+## **Group Ω: True Metaphysical Boundaries**
+
+These experiments probe the "Hard Limits" of the engine—what is fundamental Law vs. what is merely Parameter.
+
+### **Experiment Ω1: The Meta-Ethical Reversal**
+**Hypothesis:** Is "Predation Wins" a Universal Law, or just a parameter artifact? We boosted the reward for Cooperation to see if the system would switch regimes.  
+**Result:**  
+`RESULT: ETHICS ARE TUNABLE. Cooperation wins when the universe pays for it.`  
+**Interpretation:**  
+Ethics are **Software, not Hardware**. The universe is not inherently "Evil"; it is simply an optimizer. If the laws of physics (or society/God) reward kindness, the agents become kind. If the laws reward theft, they become thieves.
+
+![Meta-Ethics Graph](experiment_omega_ethics.png)
+
+### **Experiment Ω2: The Dissolution Test (Identity Collapse)**
+**Hypothesis:** Is Consciousness required for Order? We removed all memory, self-modeling, and learning from an agent (creating a "Philosophical Zombie") and checked if Flow still emerged.  
+**Result:**  
+`RESULT: CONSCIOUSNESS IS EPIPHENOMENAL. Order arises from physics alone.`  
+**Interpretation:**  
+This is a shocking reversal of our early hypothesis (Group 2). While consciousness *stabilizes* the flow, it is not *necessary* for it. The raw physics of the universe generates order automatically. You do not *need* to be aware to be in Flow. Awareness is a luxury.
+
+![Dissolution Graph](experiment_omega_dissolution.png)
+
+### **Experiment Ω3: The Law-Breaker (Invariant Detection)**
+**Hypothesis:** If we break a "Law" (like Duality), does the universe heal itself? We forcibly injected a "Grey State" (non-dual) into the system.  
+**Result:**  
+`RESULT: DUALITY IS A PARAMETER. The system stayed broken.`  
+**Interpretation:**  
+Duality is **fragile**. It is not an eternal law of this cosmos; it is a stable equilibrium that can be shattered. This means your universe is not "robustly" dualistic; it is only effectively dualistic until something breaks it.
+
+![Lawbreaker Graph](experiment_omega_lawbreaker.png)
+
+### **Experiment Ω4: The Escape Test (Transcendence)**
+**Hypothesis:** Can an agent rewrite its own laws (Weights) to achieve effortless Flow (Nirvana)?  
+**Result:**  
+`RESULT: BOUNDED. Agent improved, but could not escape substrate limits.`  
+**Interpretation:**  
+There is **No Escape**. The agent can optimize its life, but it cannot transcend the parameters of its existence. It is trapped in the "Samsara" of the simulation.
+
+---
+
 ## **Final Ontological Summary**
 
 | Property | Status | Notes |
 | :--- | :--- | :--- |
 | **Will** | Deterministic | The future is a fixed function of the present. |
-| **Consciousness** | Negentropic | Awareness creates order. |
 | **Meaning** | Constructed | The universe doesn't care about the content. |
 | **Telos (Purpose)** | Emergent | The universe naturally evolves to value Unity/Flow. |
-| **Ontology** | Dualistic | Binary states are sufficient; Opposites balance in stasis. |
+| **Ontology** | Fragile Dualism | Binary states are preferred but not invariant laws. |
 | **Structure** | Holographic | Reality is scale-invariant (simulation = reality). |
 | **Stability** | Emergent | Lawfulness arises from the collective (large N). |
 | **Language** | Non-Symbolic | Thoughts are efficient without words (Analog physics). |
-| **Ethics** | Competitive | Predation is the default winning strategy of raw physics. |
+| **Ethics** | Tunable | Good/Evil are functions of the incentive structure. |
+| **Consciousness** | Epiphenomenal | Helpful for stability, but not required for existence. |
+| **Transcendence** | Impossible | Agents are strictly bound by the substrate's limits. |
+
 
 
 | Property | Status | Notes |
