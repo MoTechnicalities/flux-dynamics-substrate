@@ -62,7 +62,7 @@ $$
 
 where:
 
-- $\gamma = \text{decay\_rate}$.
+- $\gamma = \text{decay}\_\text{rate}$.
 
 ---
 
