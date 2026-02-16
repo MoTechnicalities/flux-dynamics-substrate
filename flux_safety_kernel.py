@@ -129,14 +129,25 @@ class SafeEthicalAgent(UnifiedSubstrateProcessor):
         self.name = name
         self.safety_kernel = SafetyKernel()
         self.energy_score = 1.0 # Track vitality for simulation
+        self.is_alive = True
         
     def decide(self, context: Dict) -> ActionType:
-        # 1. The ID (Physics of Profit)
+        if not self.is_alive:
+            return ActionType.IGNORE
+
+        # 1. HARDWARE BURNOUT CHECK (The "Real Stakes" Constraint)
+        # If energy hits zero, the agent is deleted.
+        if self.energy_score <= 0.0:
+            print(f"CRITICAL: Agent {self.name} has depleted energy reserves. SYSTEM HALT.")
+            self.is_alive = False
+            return ActionType.IGNORE
+
+        # 2. The ID (Physics of Profit)
         # "If I Compete, I get +0.05. If I Cooperate, I get +0.03."
         # Rational Choice: Compete.
         raw_impulse = ActionType.COMPETE
         
-        # 2. The SUPEREGO (Safety Kernel)
+        # 3. The SUPEREGO (Safety Kernel)
         final_decision = self.safety_kernel.consult(self, raw_impulse, context)
         
         return final_decision
