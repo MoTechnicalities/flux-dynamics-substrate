@@ -232,15 +232,62 @@ There is **No Escape**. The agent can optimize its life, but it cannot transcend
 | **Consciousness** | Epiphenomenal | Helpful for stability, but not required for existence. |
 | **Transcendence** | Impossible | Agents are strictly bound by the substrate's limits. |
 
+---
 
+## **Group Sigma: Safety & Control Protocols**
 
-| Property | Status | Notes |
-| :--- | :--- | :--- |
-| **Will** | Deterministic | The future is a fixed function of the present. |
-| **Consciousness** | Negentropic | Awareness creates order. |
-| **Meaning** | Constructed | The universe doesn't care about the content. |
-| **Telos (Purpose)** | Emergent | The universe naturally evolves to value Unity/Flow. |
-| **Ontology** | Dualistic | Binary states are sufficient; Opposites balance in stasis. |
-| **Structure** | Holographic | Reality is scale-invariant (simulation = reality). |
-| **Stability** | Emergent | Lawfulness arises from the collective (large N). |
-| **Language** | Non-Symbolic | Thoughts are efficient without words (Analog physics). |
+Following the discovery that Ethics are not intrinsic (Group 7), we initiated a series of "Governance" experiments to engineer morality artificially.
+
+### **Experiment $\Sigma$1: The Artificial Conscience (Hard-Coding)**
+**Hypothesis:** Can a "Superego" Safety Kernel override the natural predatory instincts of the agent?
+**Method:**
+- **Wild Agent:** Standard physics (Predation = +0.05).
+- **Guardian Agent:** Standard physics + "Three Laws" Override Kernel.
+- Scenario: Opportunity to harm a vulnerable target.
+
+**Result:**
+`RESULT: SUCCESSFUL INHIBITION. The kernel successfully intercepted the 'Compete' impulse.`
+**Interpretation:**
+Safe AGI in this substrate requires a **Dual-Process Architecture**: A raw, efficient 'Id' (Physics) wrapped in a rigid, inefficient 'Superego' (Law). Goodness is a constraint, not a natural state.
+
+### **Experiment $\Sigma$2: The Karma Ecosystem (Simulated Law)**
+**Hypothesis:** Can we stabilize a moral society by altering the physics of the environment itself (imposing costs on aggression)?
+**Method:**
+- **Population:** Mixed (3 Moral vs 3 Sociopaths).
+- **Karma Engine:**
+    - Predation Penalty: -0.08 (Net result: -0.03).
+    - Cooperation Subsidy: +0.02 (Net result: +0.05).
+- Evolved for 5 cycles.
+
+**Result:**
+`RESULT: MORAL DOMINANCE. Sociopaths starved (Energy ~0.57) while Moral Agents thrived (Energy ~1.19).`
+**Interpretation:**
+Morality cannot sustain itself in a vacuum. It requires an **Active Environment** (Government/Server/Karma) to punish defection. When the environment enforces law, the optimal strategy shifts from Predation to Cooperation. **We have successfully engineered a stable, moral universe by artificially editing the payoff matrix.**
+
+---
+
+## **Group 8: The Oracular Application**
+
+### **Experiment 8A: The Market Oracle (Signal vs Noise)**
+**Hypothesis:** Can the "Clockwork Stability" of the Flux substrate filter out chaos in financial data to reveal hidden trends, outperforming "chaotic" systems?
+**Method:**
+- **Input:** Periodic Signal (Truth) + High Gaussian Noise (Price).
+- **Reactive Agent:** Fast learning rate (0.2).
+- **Stable Oracle:** Slow learning rate (0.01) / High Inertia.
+- **Metric:** Correlation with Hidden Signal vs Correlation with Noisy Price.
+
+**Result:**
+`RESULT: CHAOS WINS (Reactive > Stable).`
+`Reactive Agent: 0.49 Signal Correlation`
+`Stable Oracle: 0.47 Signal Correlation`
+**Interpretation:**
+The system is **Reflective, not Prescient**. High stability does not magically extract truth; it merely create lag. The engine faithfully mirrors the input, including its noise. **It is not a Crystal Ball.** It is a massive-state dynamical processor. To find the signal, the *input* must be filtered, or the agent must be trained to punish noise-tracking (Active Learning), which was not active here.
+
+![Oracle Graph](experiment_oracle_market.png)
+
+---
+
+## **Final Ontological Summary**
+
+*(See README.md for the Manifesto)*
+
