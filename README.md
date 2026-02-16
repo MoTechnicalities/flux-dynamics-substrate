@@ -3,7 +3,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 **Status:** Open Source Research Preview (Alpha 1.0)  
-**Author:** Mogir Jason Rofick / Flux Dynamics Inc.  
+**Author:** Mogir Jason Rofick  
 **Date:** February 16, 2026
 
 ---
@@ -89,4 +89,4 @@ We welcome physicists, cognitive scientists, and engineers to fork this reposito
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
-*Flux Dynamics Inc - "Mapping the Physics of Thought"*
+*"Mapping the Physics of Thought"*

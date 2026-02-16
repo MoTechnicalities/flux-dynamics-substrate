@@ -1,7 +1,7 @@
 # The Flux Dynamics Universal Substrate
 ## A Physics-Native Architecture for Artificial General Intelligence
 
-**Author:** Mogir Jason Rofick / Flux Dynamics Inc.  
+**Author:** Mogir Jason Rofick  
 **Date:** February 15, 2026  
 **Status:** Alpha Prototype / Verified Simulation
 

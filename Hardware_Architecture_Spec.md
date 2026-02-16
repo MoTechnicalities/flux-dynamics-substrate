@@ -91,4 +91,4 @@ The connection between the Flux Unit and the Digital Network is a standard **Sin
 **Conclusion:**
 The hardware required to run the "Flux Dynamics" code natively is a **Resonant Photonic Processor**. By mapping frequency to attention heads and polarization to self/other distinction, we achieve a density of computation impossible in silicon.
 
-*Document generated for Flux Dynamics Inc / Mogir Jason Rofick*
+*Document generated for Mogir Jason Rofick*
