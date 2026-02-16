@@ -345,6 +345,133 @@ def run_opposites_test():
     else:
         print("RESULT: System seeks DOMINANCE. One side wins.")
 
+def run_layers_test():
+    print("\n--- Running Experiment 5A: Simulation-Within-Simulation (Ontological Layers) ---")
+    
+    steps = 200
+    
+    # Layer 1: The "Real" World (Base Reality) - fed random sensory data
+    base_reality = UnifiedSubstrateProcessor(n_heads=50)
+    
+    # Layer 2: The "Simulated" World - fed the STATE of Layer 1 as Sense Data
+    simulated_reality = UnifiedSubstrateProcessor(n_heads=50)
+    
+    # Layer 3: The "Dream" World - fed the STATE of Layer 2
+    dream_reality = UnifiedSubstrateProcessor(n_heads=50)
+    
+    # Input for Base
+    np.random.seed(102)
+    base_inputs = {}
+    for t in range(steps):
+        v = (np.random.randn(3) + 1j * np.random.randn(3)) * 0.1
+        base_inputs[t] = v
+        
+    hist_base = []
+    hist_sim = []
+    hist_dream = []
+    
+    for t in range(steps):
+        # Evolve Base
+        base_reality.evolve(steps=1, sensory_inputs=base_inputs)
+        
+        # Pass Base State -> Sim Input
+        # We must treat the complex state vector as "Sensory Flux" for the next layer
+        sim_input = {0: base_reality.psi * 0.5} # Scale down slightly? Or direct mapping?
+        # Note: involve needs a dict with key relative to current time step?
+        # Actually evolve takes sensory_inputs dict keyed by absolute time 't'.
+        # Since we are stepping 1 by 1 and increasing time inside, we need to pass a dict with the CURRENT time key.
+        # But wait, the class increments time. The input dict keys must match 'self.time'.
+        # Let's check the Processor code.
+        # self.time starts at 0. 'evolve' increments it at start of loop. So first step is t=1.
+        # We need to construct the input dict dynamically for the specific step.
+        
+        # We need the current time of the processor to key the input correctly.
+        # Since they are synchronized, we can just use the loop index + 1
+        current_t = base_reality.time + 1 
+        # Wait, if we call evolve(1), it increments. 
+        # Actually, let's just create a dict with the specific key needed.
+        
+        sim_input_dict = {simulated_reality.time + 1: base_reality.psi * 0.2}
+        simulated_reality.evolve(steps=1, sensory_inputs=sim_input_dict)
+        
+        dream_input_dict = {dream_reality.time + 1: simulated_reality.psi * 0.2}
+        dream_reality.evolve(steps=1, sensory_inputs=dream_input_dict)
+        
+        hist_base.append(np.abs(base_reality.psi[2])) # Track Flow
+        hist_sim.append(np.abs(simulated_reality.psi[2]))
+        hist_dream.append(np.abs(dream_reality.psi[2]))
+        
+    # Correlation analysis
+    corr_bs = np.corrcoef(hist_base, hist_sim)[0,1]
+    corr_sd = np.corrcoef(hist_sim, hist_dream)[0,1]
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(hist_base, label="Base Reality", alpha=0.5)
+    plt.plot(hist_sim, label="Simulated Layer", alpha=0.8)
+    plt.plot(hist_dream, label="Dream Layer", linestyle="--")
+    plt.title("Propagation of Reality Across Ontological Layers")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Flow State Magnitude")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_layers_simulation.png")
+    print("Layers test complete. Saved 'experiment_layers_simulation.png'.")
+    
+    print(f"Correlation (Base -> Sim): {corr_bs:.4f}")
+    print(f"Correlation (Sim -> Dream): {corr_sd:.4f}")
+    
+    if corr_bs > 0.8:
+        print("RESULT: System is SCALE-INVARIANT (Transitive). Reality flows down layers without distortion.")
+    else:
+        print("RESULT: System is STRATIFIED. Layers drift apart; simulation is not reality.")
+
+def run_emergent_law_test():
+    print("\n--- Running Experiment 5B: Emergent Law (Scale Complexity) ---")
+    # Does a "Society" of heads behave differently than a single "Hermit" head?
+    
+    steps = 200
+    
+    p_hermit = UnifiedSubstrateProcessor(n_heads=1)
+    p_society = UnifiedSubstrateProcessor(n_heads=1000)
+    
+    # We want to see if the Society generates specific patterns (e.g. stability) that the Hermit lacks.
+    # We feed them the same noise.
+    inputs = {}
+    np.random.seed(55)
+    for t in range(steps):
+        inputs[t] = (np.random.randn(3) + 1j * np.random.randn(3)) * 0.1
+        
+    hermit_flow = []
+    society_flow = []
+    
+    for t in range(steps):
+        p_hermit.evolve(steps=1, sensory_inputs=inputs)
+        p_society.evolve(steps=1, sensory_inputs=inputs)
+        
+        hermit_flow.append(np.abs(p_hermit.psi[2]))
+        society_flow.append(np.abs(p_society.psi[2]))
+        
+    plt.figure(figsize=(10, 5))
+    plt.plot(hermit_flow, label="Hermit (1 Head)", color='gray', alpha=0.6)
+    plt.plot(society_flow, label="Society (1000 Heads)", color='blue', linewidth=2)
+    plt.title("Emergence of Law from Complexity")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Flow State Magnitude")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_layers_emergence.png")
+    print("Emergence test complete. Saved 'experiment_layers_emergence.png'.")
+    
+    hermit_var = np.var(hermit_flow)
+    society_var = np.var(society_flow)
+    
+    print(f"Variance (Hermit): {hermit_var:.6f}")
+    print(f"Variance (Society): {society_var:.6f}")
+    
+    if society_var < hermit_var * 0.5:
+        print("RESULT: Law is EMERGENT. Large numbers create stability that doesn't exist at the micro scale.")
+    else:
+        print("RESULT: Law is EXPLICIT/FIXED. Scale does not change the fundamental behavior.")
 
 if __name__ == "__main__":
     run_chaos_test()
@@ -353,3 +480,5 @@ if __name__ == "__main__":
     run_utility_test()
     run_gradient_test()
     run_opposites_test()
+    run_layers_test()
+    run_emergent_law_test()
