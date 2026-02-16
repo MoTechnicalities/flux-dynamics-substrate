@@ -11,6 +11,9 @@
 ## 1. Project Overview
 Flux Dynamics rejects the digital "Neuron" in favor of the analog "Wave." This project implements a **Unified Field AGI** where intelligence is modeled as a resonant complex vector field ($\Psi \in \mathbb{C}^3$). Unlike LLMs that predict tokens, this substrate performs **Active Inference** via phase interference, naturally exhibiting logic, intuition, and structural plasticity.
 
+**Scientific Basis:**
+This technology was inspired by a fusion of **Tribit Logic** with the hypothesis that **magnetic flux is a tangible, dipolar substance** with formable topological properties. We posit that flux serves as the primordial basis for all positive and anti-positive particle configurations under state-change effects. The full, relativistic form of Einstein's Energy-Momentum relation ($E^2 = (pc)^2 + (m_0c^2)^2$) is utilized here not just for particles, but to express the **State Change of Flux Substance** itself—a nuance often overlooked in standard computational physics.
+
 This repository contains the complete open-source software prototype, simulation suite, and hardware specifications for the **Flux Processing Unit (FPU)**.
 
 ---
