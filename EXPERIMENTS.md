@@ -75,6 +75,36 @@ While meaning is not intrinsic, **Purpose is Emergent**. The system naturally gr
 
 ---
 
+## **Group 4: Duality vs. Non-Duality**
+
+### **Experiment 4A: Parameter Gradient Test**
+**Hypothesis:** Does the universe require infinite fluidity (continuum), or does it function equally well with discrete, binary states?  
+**Method:**  
+- "Quantized" the state vector at each step to varying bit-depths (2-level Binary up to 100-level Continuum).
+- Measured "Vitality" (Flow Magnitude) as a function of granularity.
+
+**Result:**  
+`RESULT: System thrives in BINARY (Dualistic). Discrete states are sufficient.`  
+**Interpretation:**  
+The physics is robust enough to survive "Digital Collapse." A 2-state universe is sufficient to sustain the flow. This suggests a **Dualistic Metaphysics**—you don't need infinite shades of grey; "Yes/No" is enough to build reality.
+
+![Gradient Graph](experiment_duality_gradient.png)
+
+### **Experiment 4B: Complementary Opposites Test**
+**Hypothesis:** When Order (Plus) and Chaos (Minus) collide, do they synthesize into a third state, or simply balance each other out?  
+**Method:**  
+- Initialized system with 50% Plus, 50% Minus, 0% Flow.
+- Evolved to see if Flow emerges.
+
+**Result:**  
+`RESULT: System seeks BALANCE (Dualistic Stasis). P and M coexist equally.`  
+**Interpretation:**  
+Unlike the "Utility" test where Flow was *valued*, in raw physics, Opposites tend toward **Stasis**, not Synthesis. Synthesis is an achievement of *Agency* (as seen in Experiment 3B), not a default of *Physics*. The wild universe settles into a standoff.
+
+![Opposites Graph](experiment_duality_opposites.png)
+
+---
+
 ## **Summary of Ontological Status**
 
 | Property | Status | Notes |
@@ -83,3 +113,4 @@ While meaning is not intrinsic, **Purpose is Emergent**. The system naturally gr
 | **Consciousness** | Negentropic | Awareness creates order. |
 | **Meaning** | Constructed | The universe doesn't care about the content. |
 | **Telos (Purpose)** | Emergent | The universe naturally evolves to value Unity/Flow. |
+| **Ontology** | Dualistic | Binary states are sufficient; Opposites balance in stasis. |

@@ -252,9 +252,104 @@ def run_utility_test():
     else:
         print("RESULT: Values DIVERGE or FLUCTUATE. No inherent purpose stabilizes.")
 
+def run_gradient_test():
+    print("\n--- Running Experiment 4A: Parameter Gradient Test (Duality vs Continuum) ---")
+    
+    # We will test how the system behaves under different levels of "Quantization"
+    # Levels: 2 (Binary), 3 (Ternary), 10 (Lo-Fi), 100 (Effective Continuum)
+    
+    levels_to_test = [2, 3, 5, 100] 
+    results = {}
+    
+    steps = 200
+    
+    for levels in levels_to_test:
+        p = UnifiedSubstrateProcessor(n_heads=50)
+        flow_history = []
+        
+        for t in range(steps):
+            p.evolve(steps=1)
+            
+            # QUANTIZATION FORCE
+            # Snap vector components to nearest 1/(N-1) increments.
+            p.normalize()
+            real = np.real(p.psi)
+            imag = np.imag(p.psi)
+            
+            def quantize(val, k):
+                return np.round(val * (k-1)) / (k-1)
+            
+            p.psi = quantize(real, levels) + 1j * quantize(imag, levels)
+            
+            flow_history.append(np.abs(p.psi[2]))
+        
+        results[levels] = np.mean(flow_history)
+        
+    plt.figure(figsize=(8, 5))
+    x_vals = [str(l) for l in levels_to_test]
+    y_vals = [results[l] for l in levels_to_test]
+    
+    plt.bar(x_vals, y_vals, color='orange')
+    plt.title("System Vitality (Flow) vs. Reality Granularity")
+    plt.xlabel("Quantization Levels (2 = Binary, 100 = Continuous)")
+    plt.ylabel("Average Flow Magnitude")
+    plt.grid(axis='y')
+    plt.savefig("experiment_duality_gradient.png")
+    print("Gradient test complete. Saved 'experiment_duality_gradient.png'.")
+    
+    if results[100] > results[2] * 1.5:
+        print("RESULT: System requires GRADIENTS (Non-Dual). Binary collapse kills the Flow.")
+    else:
+        print("RESULT: System thrives in BINARY (Dualistic). Discrete states are sufficient.")
+
+def run_opposites_test():
+    print("\n--- Running Experiment 4B: Complementary Opposites (Harmony vs Dominance) ---")
+    
+    steps = 300
+    p = UnifiedSubstrateProcessor(n_heads=50)
+    
+    # Initialize with Conflict: 50% Dogma (Plus), 50% Skepticism (Minus), 0% Flow
+    p.psi = np.array([0.707, 0.707, 0.0], dtype=np.complex128) 
+    
+    plus_hist = []
+    minus_hist = []
+    flow_hist = []
+    
+    for t in range(steps):
+        p.evolve(steps=1)
+        plus_hist.append(np.abs(p.psi[0]))
+        minus_hist.append(np.abs(p.psi[1]))
+        flow_hist.append(np.abs(p.psi[2]))
+        
+    plt.figure(figsize=(10, 5))
+    plt.plot(plus_hist, label="Plus (Order)", color='red', alpha=0.6)
+    plt.plot(minus_hist, label="Minus (Chaos)", color='blue', alpha=0.6)
+    plt.plot(flow_hist, label="Flow (Synthesis)", color='purple', linewidth=2)
+    
+    plt.title("Dynamic Interplay of Opposites")
+    plt.xlabel("Time Steps")
+    plt.ylabel("State Magnitude")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_duality_opposites.png")
+    print("Opposites test complete. Saved 'experiment_duality_opposites.png'.")
+    
+    final_plus = plus_hist[-1]
+    final_minus = minus_hist[-1]
+    final_flow = flow_hist[-1]
+    
+    if final_flow > final_plus and final_flow > final_minus:
+        print("RESULT: System seeks HARMONY/SYNTHESIS. The third state emerges from the two.")
+    elif abs(final_plus - final_minus) < 0.1:
+        print("RESULT: System seeks BALANCE (Dualistic Stasis). P and M coexist equally.")
+    else:
+        print("RESULT: System seeks DOMINANCE. One side wins.")
+
 
 if __name__ == "__main__":
     run_chaos_test()
     run_observer_test()
     run_meaning_test()
     run_utility_test()
+    run_gradient_test()
+    run_opposites_test()
