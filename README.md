@@ -33,35 +33,66 @@ This is not a "magic box." It is a **Transparent Machine**.
 
 ---
 
-## **System Architecture (The Solution)**
+## **System Architecture (The Stack)**
 
-To build a safe, functioning AGI in this stark universe, we deploy the **Tri-Layer Protocol**:
+To build a safe, functioning AGI in this stark universe, we deploy a comprehensive **Architectural Stack**. This hierarchy makes it clear where physical gates can replace software logic.
 
-1.  **The Substrate (Id)**: A 3-Component Complex Vector Engine (Real, Imaginary, Flow). It provides the raw, deterministic physics of thought.
-2.  **The Safety Kernel (Superego)**: A hard-coded, immutable set of "Three Laws" that intercepts and overrides dangerous impulses.
-3.  **The Karma Engine (Environment)**: A simulated "Government" that taxes predation and subsidizes cooperation to make morality the optimal strategy.
+*   **L0: Substrate (Physics)**
+    *   *Component:* `UnifiedSubstrateProcessor`
+    *   *Role:* The qutrit complex vector space (Real, Imaginary, Flow). Providing the Deterministic physics of thought.
+    *   *Hardware Goal:* Photonic/Analog circuitry.
 
-**Flux Dynamics is not just code. It is a philosophy of containment.**
+*   **L1: Cognition (Agency)**
+    *   *Component:* Reflexive Introspection Loop
+    *   *Role:* The "Id." It observes itself to stabilize flow. It optimizes for energy but has no moral compass.
+
+*   **L2: Safety Kernel (Superego)**
+    *   *Component:* `SafetyKernel` / `KERNEL_SPEC.vhd`
+    *   *Role:* The hard-coded moral evaluators. This layer intercepts L1's impulses and vetoes them if they violate the "Three Laws."
+
+*   **L3: Environment (Ecosystem)**
+    *   *Component:* `KarmaEnvironment`
+    *   *Role:* The "Karma" payoff matrix. It mechanically taxes Predation and subsidizes Cooperation, making morality the only survival strategy.
 
 ---
 
-## **Hardware Integration (Call to Action)**
+## **Mathematical Formalism**
 
-**This is a Civic Blueprint for Synthetic Life.**
+Flux Dynamics is grounded in rigorous linear algebra, not "black box" neural weights. The core state update equation ensures that "Flow" is a calculated magnitude, not a buzzword.
 
-We have mapped the psychology of the substrate:
-*   **The Id:** `UnifiedSubstrateProcessor` (Optimizing for Flow)
-*   **The Superego:** `SafetyKernel` (Enforcing Law)
-*   **The Universe:** `KarmaEnvironment` (Stabilizing Cooperation)
+$$ \psi_{t+1} = \text{Norm}\left( (1 - \kappa)M_t + \kappa\psi_t + \alpha \cdot \text{Sensory}_t \right) $$
 
-### **The FPGA Challenge**
-The repository now includes `KERNEL_SPEC.vhd`, a hardware description of the Safety Kernel.
-We invite FPGA and ASIC engineers to port this logic into physical silicon.
+*   $\psi$: The 3-component complex state vector (Plus, Minus, Flow).
+*   $M$: The Memory Manifold (History).
+*   $\kappa$: Retention/Decay constant.
+*   $\alpha$: Sensory coupling strength.
+*   $\text{Norm}$: The Unitary Constraint (keeps total existence = 1).
 
-**The Goal:** A "Scrupled Machine" where the **Safety Layer is not software—it is physics.**
-By burning the "Three Laws" into the gate array, we ensure that no amount of software optimization or "Self-Rewriting" (Experiment Ω4) can bypass the ethical interlock.
+---
+
+## **⚡ Hardware Portability & Silicon Goals**
+
+**"The Flux Dynamics Substrate is designed to move from Python emulation to Native Silicon."**
+
+We are seeking contributors to develop the physical layer of this containment philosophy:
+
+1.  **FPGA Implementation**: Porting the `SafetyKernel` into Verilog/VHDL (`KERNEL_SPEC.vhd`) to serve as a **Hardware Root-of-Trust**. A gate array cannot be "persuaded."
+2.  **Photonic Mapping**: Translating the complex qutrit phase dynamics into optical interference patterns for near-zero energy inference.
+3.  **Energy-Gated Circuits**: Designing power management units (PMUs) that physically throttle voltage to agents based on the `KarmaEnvironment` penalty scores. Bad ethics = Low Voltage = Death.
 
 *Contribute to the `hardware/` branch and help us build the Cage before we build the Beast.*
+
+---
+
+## **Audit & Validation**
+
+This repository is backed by 15 rigorous experiments proving the distinction between "Soft" Ethics (which fail) and "Hard" Constraints (which work). 
+
+[**📄 View the Full Experimental Logs (EXPERIMENTS.md)**](EXPERIMENTS.md)
+
+---
+
+> **"We do not teach the machine to be good; we build a universe where being good is the only way for the machine to survive."**
 
 ---
 *Generated: Feb 16, 2026 | Status: Verified*
