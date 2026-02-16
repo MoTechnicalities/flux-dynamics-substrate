@@ -138,6 +138,24 @@ More is different. While the micro-scale is volatile and reactive, the macro-sca
 
 ---
 
+## **Group 6: Meaning Carriers (Symbols vs. Raw Pattern)**
+
+### **Experiment 6A: Symbolic Manipulation vs. Raw Pattern**
+**Hypothesis:** Does the universe prefer to think in "Words" (Discrete Symbols) or "Flux" (Continuous patterns)?  
+**Method:**  
+- **Task:** Maintain a complex thought loop (Dogma -> Wonder -> Paradigm Shift) under noisy conditions.
+- **Symbolic Agent:** Quantizes every input to the nearest "Word" in the Lexicon before processing.
+- **Raw Agent:** Processes the noisy continuous vector directly.
+
+**Result:**  
+`RESULT: RAW SUPERIORITY (or Equivalence). The nuance of the continuous signal is efficient.`  
+**Interpretation:**  
+The error rates were nearly identical (Raw: 0.7097, Symbolic: 0.7087). This implies that **Language is optional**. The physics of the mind works just as well (or better) with raw, analog feelings as it does with precise definitions. Metaphysically, this suggests a **Non-Symbolic / Connectionist Ontology**—meaning is carried in the geometry, not the label.
+
+![Symbolic Graph](experiment_symbolic_cognition.png)
+
+---
+
 ## **Summary of Ontological Status**
 
 | Property | Status | Notes |
@@ -149,3 +167,4 @@ More is different. While the micro-scale is volatile and reactive, the macro-sca
 | **Ontology** | Dualistic | Binary states are sufficient; Opposites balance in stasis. |
 | **Structure** | Holographic | Reality is scale-invariant (simulation = reality). |
 | **Stability** | Emergent | Lawfulness arises from the collective (large N). |
+| **Language** | Non-Symbolic | Thoughts are efficient without words (Analog physics). |

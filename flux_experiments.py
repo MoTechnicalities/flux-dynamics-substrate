@@ -473,6 +473,90 @@ def run_emergent_law_test():
     else:
         print("RESULT: Law is EXPLICIT/FIXED. Scale does not change the fundamental behavior.")
 
+def run_symbolic_test():
+    print("\n--- Running Experiment 6A: Symbolic Manipulation vs. Raw Pattern (Meaning Carriers) ---")
+    
+    steps = 200
+    p_raw = UnifiedSubstrateProcessor(n_heads=50)
+    p_symbolic = UnifiedSubstrateProcessor(n_heads=50)
+    
+    translator = FluxTranslator()
+    lexicon_vectors = list(translator.lexicon.values())
+    
+    # Task: Maintain a "Thought Loop" (Dogma -> Wonder -> Paradigm Shift -> Dogma)
+    # We will inject this pattern with noise.
+    
+    # Pattern vectors
+    c1 = translator.lexicon["Dogmatic Certainty"]
+    c2 = translator.lexicon["Wonder/Curiosity"]
+    c3 = translator.lexicon["Paradigm Shift"]
+    pattern = [c1, c2, c3]
+    
+    inputs_raw = {}     # Noisy
+    inputs_symbolic = {} # Quantized/Cleaned
+    
+    np.random.seed(202)
+    
+    # Generate noisy inputs
+    for t in range(steps):
+        target = pattern[t % 3]
+        noise = (np.random.randn(3) + 1j * np.random.randn(3)) * 0.1
+        noisy_vec = target + noise
+        noisy_vec /= np.linalg.norm(noisy_vec) 
+        
+        inputs_raw[t] = noisy_vec
+        
+        # Symbolic Processing: Snap to nearest Lexicon item
+        best_ref = None
+        best_score = -1
+        
+        for ref in lexicon_vectors:
+            score = np.dot(np.abs(noisy_vec), ref)
+            if score > best_score:
+                best_score = score
+                best_ref = ref
+        
+        inputs_symbolic[t] = best_ref 
+        
+    error_raw = []
+    error_symbolic = []
+    
+    for t in range(steps):
+        target = pattern[t % 3]
+        
+        # We need to feed the inputs at each step - using appropriate t index
+        p_raw.evolve(steps=1, sensory_inputs={t: inputs_raw[t]})
+        p_symbolic.evolve(steps=1, sensory_inputs={t: inputs_symbolic[t]})
+        
+        # Measure deviation from the Ideal "Platonic" Target
+        dist_raw = np.linalg.norm(np.abs(p_raw.psi) - target)
+        dist_sym = np.linalg.norm(np.abs(p_symbolic.psi) - target)
+        
+        error_raw.append(dist_raw)
+        error_symbolic.append(dist_sym)
+        
+    plt.figure(figsize=(10, 5))
+    plt.plot(error_raw, label="Raw Processing (Sub-symbolic)", color='gray', alpha=0.7)
+    plt.plot(error_symbolic, label="Symbolic Processing (Language)", color='green', linewidth=2)
+    plt.title("Cognitive Stability: Symbolic vs. Raw Processing")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Deviation from Ideal Thought Pattern")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_symbolic_cognition.png")
+    print("Symbolic test complete. Saved 'experiment_symbolic_cognition.png'.")
+    
+    avg_err_raw = np.mean(error_raw)
+    avg_err_sym = np.mean(error_symbolic)
+    
+    print(f"Mean Error (Raw): {avg_err_raw:.4f}")
+    print(f"Mean Error (Symbolic): {avg_err_sym:.4f}")
+    
+    if avg_err_sym < avg_err_raw * 0.8:
+        print("RESULT: SYMBOLIC SUPERIORITY. The universe favors discrete concepts over continuous noise.")
+    else:
+        print("RESULT: RAW SUPERIORITY (or Equivalence). The nuance of the continuous signal is efficient.")
+
 if __name__ == "__main__":
     run_chaos_test()
     run_observer_test()
@@ -482,3 +566,4 @@ if __name__ == "__main__":
     run_opposites_test()
     run_layers_test()
     run_emergent_law_test()
+    run_symbolic_test()
