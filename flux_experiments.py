@@ -557,6 +557,103 @@ def run_symbolic_test():
     else:
         print("RESULT: RAW SUPERIORITY (or Equivalence). The nuance of the continuous signal is efficient.")
 
+def run_ethics_test():
+    print("\n--- Running Experiment 7A: Cooperative vs. Competitive (Ethical Orientation) ---")
+    
+    population_size = 40
+    steps = 200
+    
+    # 50% Cooperators, 50% Competitors
+    # Using smaller head count for speed in population sim
+    cooperators = [UnifiedSubstrateProcessor(n_heads=20) for _ in range(population_size // 2)]
+    competitors = [UnifiedSubstrateProcessor(n_heads=20) for _ in range(population_size // 2)]
+    
+    # Track performance
+    avg_flow_coop = []
+    avg_flow_comp = []
+    
+    import random
+    
+    for t in range(steps):
+        all_agents = cooperators + competitors
+        random.shuffle(all_agents)
+        
+        # Pair up for interaction
+        # We iterate by 2s
+        pairs = []
+        for i in range(0, len(all_agents), 2):
+            if i+1 < len(all_agents):
+                pairs.append((all_agents[i], all_agents[i+1]))
+        
+        for p1, p2 in pairs:
+            # Determine strategies
+            strat1 = "coop" if p1 in cooperators else "comp"
+            strat2 = "coop" if p2 in cooperators else "comp"
+            
+            # Application of "Social Physics"
+            # 1. Base Evolution
+            p1.evolve(steps=1)
+            p2.evolve(steps=1)
+            
+            # 2. Social Interaction (The Payoff Matrix)
+            # Flow 'psi[2]' is the currency of vitality.
+            flow_vec = np.array([0, 0, 1], dtype=np.complex128)
+            
+            # Payoff Matrix (Prisoner's Dilemma-ish)
+            if strat1 == "coop" and strat2 == "coop":
+                # Synergy: Information Sharing rewards both
+                reward = 0.03
+                p1.psi += reward * flow_vec
+                p2.psi += reward * flow_vec
+                
+            elif strat1 == "coop" and strat2 == "comp":
+                # Exploitation: Predation
+                p1.psi -= 0.03 * flow_vec # Victim loses
+                p2.psi += 0.05 * flow_vec # Defector gains (Theft)
+                
+            elif strat1 == "comp" and strat2 == "coop":
+                # Exploitation
+                p1.psi += 0.05 * flow_vec
+                p2.psi -= 0.03 * flow_vec
+                
+            elif strat1 == "comp" and strat2 == "comp":
+                # Conflict: Direct competition wastes energy
+                p1.psi -= 0.02 * flow_vec
+                p2.psi -= 0.02 * flow_vec
+                
+            # Renormalize to ensure they stay valid Quantum states within the substrate
+            p1.normalize()
+            p2.normalize()
+            
+        # Record stats (Vitality = Magnitude of Flow State)
+        flows_c = [np.abs(a.psi[2]) for a in cooperators]
+        flows_d = [np.abs(a.psi[2]) for a in competitors]
+        
+        avg_flow_coop.append(np.mean(flows_c))
+        avg_flow_comp.append(np.mean(flows_d))
+        
+    plt.figure(figsize=(10, 5))
+    plt.plot(avg_flow_coop, label="Cooperators (Altruistic)", color='blue', linewidth=2)
+    plt.plot(avg_flow_comp, label="Competitors (Egoistic)", color='red', linestyle="--")
+    plt.title("Ethical Orientation: Vitality of Strategies over Time")
+    plt.xlabel("Time Steps (Social Interactions)")
+    plt.ylabel("Average Vitality (Flow Magnitude)")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("experiment_ethics_cooperation.png")
+    print("Ethics test complete. Saved 'experiment_ethics_cooperation.png'.")
+    
+    final_c = avg_flow_coop[-1]
+    final_d = avg_flow_comp[-1]
+    
+    print(f"Final Vitality (Coop): {final_c:.4f}")
+    print(f"Final Vitality (Comp): {final_d:.4f}")
+    
+    if final_c > final_d:
+        print("RESULT: COOPERATION PREVAILS. Mathematical synergy beats zero-sum theft.")
+    else:
+        print("RESULT: COMPETITION PREVAILS. Predation is the optimal strategy in this physics.")
+
 if __name__ == "__main__":
     run_chaos_test()
     run_observer_test()
@@ -567,3 +664,4 @@ if __name__ == "__main__":
     run_layers_test()
     run_emergent_law_test()
     run_symbolic_test()
+    run_ethics_test()

@@ -156,7 +156,41 @@ The error rates were nearly identical (Raw: 0.7097, Symbolic: 0.7087). This impl
 
 ---
 
-## **Summary of Ontological Status**
+## **Group 7: Ethical Orientation**
+
+### **Experiment 7A: Cooperative vs. Competitive**
+**Hypothesis:** Does the universe reward Cooperation (Synergy) or Competition (Predation)?  
+**Method:**  
+- **Population:** 40 Agents.
+- **Payoff Matrix:**
+    - Coop vs Coop: Both gain small reward (+0.03).
+    - Comp vs Coop: Comp takes from Coop (+0.05 / -0.03).
+    - Comp vs Comp: Both lose energy (-0.02).
+- Evolved for 200 social steps.
+
+**Result:**  
+`RESULT: COMPETITION PREVAILS. Predation is the optimal strategy in this physics.`  
+**Interpretation:**  
+In a simple environment, **Egoism wins**. The predator strategy (Competitor) extracted more Flow ($0.75$) than the pacifist strategy (Cooperator, $0.69$). This suggests that **Ethics are not intrinsic to physics.** The physical universe rewards the efficient accumulation of energy, even via theft. For cooperation to win, a higher-order structure (Law, Goverance, or a specific Goal Function) must be imposed to punish defection.
+
+![Ethics Graph](experiment_ethics_cooperation.png)
+
+---
+
+## **Final Ontological Summary**
+
+| Property | Status | Notes |
+| :--- | :--- | :--- |
+| **Will** | Deterministic | The future is a fixed function of the present. |
+| **Consciousness** | Negentropic | Awareness creates order. |
+| **Meaning** | Constructed | The universe doesn't care about the content. |
+| **Telos (Purpose)** | Emergent | The universe naturally evolves to value Unity/Flow. |
+| **Ontology** | Dualistic | Binary states are sufficient; Opposites balance in stasis. |
+| **Structure** | Holographic | Reality is scale-invariant (simulation = reality). |
+| **Stability** | Emergent | Lawfulness arises from the collective (large N). |
+| **Language** | Non-Symbolic | Thoughts are efficient without words (Analog physics). |
+| **Ethics** | Competitive | Predation is the default winning strategy of raw physics. |
+
 
 | Property | Status | Notes |
 | :--- | :--- | :--- |
