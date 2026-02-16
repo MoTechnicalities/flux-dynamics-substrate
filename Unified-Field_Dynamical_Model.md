@@ -83,9 +83,7 @@ $$
 $$
 
 $$
-\psi_f(t + \frac{1}{2})
-= (1-\gamma)\psi_f(t)
-+ \sum_{h=2}^{H-1} 0.9\,\theta_h(t).
+\psi_{f}\left(t + \frac{1}{2}\right) = (1-\gamma)\psi_{f}(t) + \sum_{h=2}^{H-1} 0.9\,\theta_{h}(t).
 $$
 
 ---
