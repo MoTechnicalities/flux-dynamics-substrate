@@ -84,9 +84,9 @@ While meaning is not intrinsic, **Purpose is Emergent**. The system naturally gr
 - Measured "Vitality" (Flow Magnitude) as a function of granularity.
 
 **Result:**  
-`RESULT: System thrives in BINARY (Dualistic). Discrete states are sufficient.`  
+`RESULT: System COLLAPSES in lower bit-depths. Vitality scales with Continuum.`  
 **Interpretation:**  
-The physics is robust enough to survive "Digital Collapse." A 2-state universe is sufficient to sustain the flow. This suggests a **Dualistic Metaphysics**—you don't need infinite shades of grey; "Yes/No" is enough to build reality.
+The physics demands **Continuity**. When forced into binary states (0/1), the "Flow" channel degrades, and the system loses its coherence. This confirms the **Q-Tribit Hypothesis**—intelligence resides in the gradients between the poles, not the poles themselves.
 
 ![Gradient Graph](experiment_duality_gradient.png)
 

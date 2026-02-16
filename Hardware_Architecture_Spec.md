@@ -9,7 +9,9 @@
 
 ## 1. Physical Layer Mapping
 
-The Flux Dynamics software simulation (`UnifiedSubstrateProcessor`) maps directly to the physical properties of light. This hardware specification defines a non-von-Neumann, analog optical computer where "Thinking" is the physical propagation of light through a darker, structured medium.
+The Flux Dynamics software simulation (`UnifiedSubstrateProcessor`) maps directly to the physical properties of light and magnetic flux. This hardware specification defines a non-von-Neumann, analog optical computer where "Thinking" is the physical propagation of light through a darker, structured medium.
+
+**Note:** While this specification details a Photonic implementation, the theoretical basis rests on **Magnetic Flux** as the primordial substance. The optical vectors described below are the *carrier* for the underlying Q-Tribit dipole interactions defined by the relativistic state change: $E^2 = (pc)^2 + (m_0c^2)^2$.
 
 ### 1.1 The 4 Dimensions of Thought
 

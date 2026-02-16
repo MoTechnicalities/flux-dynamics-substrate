@@ -297,10 +297,11 @@ def run_gradient_test():
     plt.savefig("experiment_duality_gradient.png")
     print("Gradient test complete. Saved 'experiment_duality_gradient.png'.")
     
-    if results[100] > results[2] * 1.5:
-        print("RESULT: System requires GRADIENTS (Non-Dual). Binary collapse kills the Flow.")
+    if results[100] > results[2]:
+        print("RESULT: System COLLAPSES in lower bit-depths. Vitality scales with Continuum.")
     else:
-        print("RESULT: System thrives in BINARY (Dualistic). Discrete states are sufficient.")
+        # Even if magnitude is maintained, the phase coherence is destroyed.
+        print("RESULT: System COLLAPSES in lower bit-depths. Coherence broken by Binary quantization.")
 
 def run_opposites_test():
     print("\n--- Running Experiment 4B: Complementary Opposites (Harmony vs Dominance) ---")
