@@ -73,17 +73,17 @@ Let $\Psi(t+1/2)$ denote the amplitudes after internal updates but before normal
 Updates:
 
 $$
-\psi_+(t + \tfrac{1}{2})
+\psi_+(t + \frac{1}{2})
 = \psi_+(t) + 1.2\,\theta_0(t),
 $$
 
 $$
-\psi_-(t + \tfrac{1}{2})
+\psi_-(t + \frac{1}{2})
 = \psi_-(t) + 1.1\,\theta_1(t),
 $$
 
 $$
-\psi_f(t + \tfrac{1}{2})
+\psi_f(t + \frac{1}{2})
 = (1-\gamma)\psi_f(t)
 + \sum_{h=2}^{H-1} 0.9\,\theta_h(t).
 $$
@@ -95,9 +95,9 @@ $$
 At designated timesteps $t \in \mathcal{S}$:
 
 $$
-\Psi(t + \tfrac{1}{2})
+\Psi(t + \frac{1}{2})
 \leftarrow 
-\Psi(t + \tfrac{1}{2})
+\Psi(t + \frac{1}{2})
 +
 \alpha
 \begin{pmatrix}
@@ -117,16 +117,16 @@ Define:
 
 $$
 N(t) = \sqrt{
-|\psi_+(t+\tfrac{1}{2})|^2 +
-|\psi_-(t+\tfrac{1}{2})|^2 +
-|\psi_f(t+\tfrac{1}{2})|^2 }.
+|\psi_+(t+\frac{1}{2})|^2 +
+|\psi_-(t+\frac{1}{2})|^2 +
+|\psi_f(t+\frac{1}{2})|^2 }.
 $$
 
 Then:
 
 $$
 \psi_k(t+1)
-= \frac{\psi_k(t+\tfrac{1}{2})}{N(t)}
+= \frac{\psi_k(t+\frac{1}{2})}{N(t)}
 \quad
 \text{for } k\in \{+, -, f\}.
 $$
