@@ -15,8 +15,8 @@ As the AI industry hits the asymptote of Large Language Model (LLM) scaling, the
 
 The core innovation of Flux Dynamics is the rejection of the "Neuron" in favor of the "Wave." Intelligence is modeled as a dynamic interference pattern within a Unified Field.
 
-### 2.1 The 3-Qutrit State Vector
-The fundamental unit of the substrate is a normalized complex 3-vector $\Psi$, representing the dialectic state of an agent:
+### 2.1 The Flux Q-Tribit State Vector
+The fundamental unit of the substrate is a normalized complex 3-vector $\Psi$, representing the dialectic state of an agent. Unlike a generic "Qutrit" (unipolar 0,1,2), this vector operates on a **Bipolar Axis**:
 
 $$
 \Psi = \begin{bmatrix}

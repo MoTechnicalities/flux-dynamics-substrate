@@ -5,10 +5,10 @@ from flux_translator import FluxTranslator
 
 class UnifiedSubstrateProcessor:
     """
-    Implements the 9-Component Agency Architecture within a unified 3-Qutrit Substrate.
+    Implements the 9-Component Agency Architecture within a unified Flux Q-Tribit Substrate.
     Adheres to the formal specifications of:
     1. Unified-Field Dynamical Model (Base Physics)
-    2. Implementing Agency Inside a Unified Three-Qutrit Substrate (Cognitive Layer)
+    2. Implementing Agency Inside a Unified Flux Q-Tribit Substrate (Cognitive Layer)
     
     The state is always normalized to Unit Norm (Unity of Experience).
     """

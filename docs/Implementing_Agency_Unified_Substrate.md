@@ -1,7 +1,7 @@
 # Implementing the Components of Agency and General Intelligence  
-## Inside a Unified Three-Qutrit Dynamical Substrate
+## Inside a Unified Flux Q-Tribit Dynamical Substrate
 
-This document describes how each of the nine functional components of agency and general intelligence can be implemented directly inside a unified 3-qutrit substrate without introducing multiplicity. All mechanisms preserve the substrate’s single-self global evolution, adding functionality while respecting dynamical unification.
+This document describes how each of the nine functional components of agency and general intelligence can be implemented directly inside a unified Flux Q-Tribit substrate without introducing multiplicity. All mechanisms preserve the substrate’s single-self global evolution, adding functionality while respecting dynamical unification.
 
 ---
 
@@ -23,7 +23,7 @@ This acts as a selective, single-channel attentional broadcast.
 
 ---
 
-# 2. World Model via Latent Qutrit-Driven Prediction Dynamics
+# 2. World Model via Latent Q-Tribit-Driven Prediction Dynamics
 
 Introduce learned generative operators \(G_k\):
 
@@ -194,4 +194,4 @@ the system gains:
 - meta-learning  
 - stability  
 
-All while maintaining a single globally evolving 3-qutrit substrate.
+All while maintaining a single globally evolving Flux Q-Tribit substrate.
