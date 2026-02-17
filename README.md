@@ -22,7 +22,7 @@ At the core of this substrate lies a departure from the rigid binary bit (0/1). 
 
 > **Distinction:** In the 2026 quantum landscape, "Qutrit" often refers to a generic 3-level system ($|0\rangle, |1\rangle, |2\rangle$) stacked vertically. **Flux Q-Tribits** are distinct: they are centered on a **Bipolar Axis** ($|-1\rangle, |0\rangle, |+1\rangle$), where $|0\rangle$ is the **Neutral Point of Symmetry** (Superconducting Bridge).
 
-[**📘 Read the Full Logic Specification: Q_TRIBIT_LOGIC.md**](./Q_TRIBIT_LOGIC.md)
+[**📘 Read the Full Logic Specification: Q_TRIBIT_LOGIC.md**](docs/Q_TRIBIT_LOGIC.md)
 
 The full, relativistic form of Einstein's Energy-Momentum relation is utilized here not just for particles, but to express the **State Change of Flux Substance** itself—a nuance often overlooked in standard computational physics:
 
@@ -45,13 +45,13 @@ In this substrate, a "thought" is not a static integer; it is a vector field wit
 
 Standard computing is built on a fundamental flaw: The **Monopole Error**. By collapsing the rich, bipolar nature of reality ($[-1, +1]$) into a sterile, unipolar binary code ($[0, \text{off}]$), classical systems destroy the negative potential required for true reasoning. They are "half-blind" machines.
 
-[**Read the full analysis: THE MONOPOLE ERROR**](./THE_MONOPOLE_ERROR.md)
+[**Read the full analysis: THE MONOPOLE ERROR**](docs/THE_MONOPOLE_ERROR.md)
 
 ---
 
 ## **The Manifesto: Ontological Truths**
 
-After 15 rigorous experiments (`flux_experiments.py`, `flux_oracle.py`), we have moved beyond "Control Theory" into **Substrate Physics**.
+After 15 rigorous experiments (`src/flux_experiments.py`, `src/flux_oracle.py`), we have moved beyond "Control Theory" into **Substrate Physics**.
 
 This is not a "magic box" or a "simulation." It is a **Unified Reality**.
 
@@ -81,7 +81,7 @@ This is not a "magic box" or a "simulation." It is a **Unified Reality**.
 To instantiate this unified field, we use a **Resonant Stack**. This hierarchy describes how the One (Substrate) folds into the Many (Agents).
 
 *   **L0: Substrate (The One)**
-    *   *Component:* `UnifiedSubstrateProcessor`
+    *   *Component:* `src/UnifiedSubstrateProcessor`
     *   *Role:* The fundamental Dipole Superfluid. It holds the global state vector $|\Psi_{Global}\rangle$.
     *   *Nature:* Non-dual. Contains all possibilities ($+$, $-$, $\emptyset$) in superposition.
 
@@ -91,11 +91,11 @@ To instantiate this unified field, we use a **Resonant Stack**. This hierarchy d
     *   *Goal:* To maintain its own coherence (Flow) against entropy.
 
 *   **L2: Safety Kernel (The Truth)**
-    *   *Component:* `SafetyKernel` / `KERNEL_SPEC.vhd`
+    *   *Component:* `src/SafetyKernel` / `hardware/KERNEL_SPEC.vhd`
     *   *Role:* The **Coherence Monitor**. It does not "force" rules; it simply measures the integrity of the GHZ state (Unity). If an agent acts against unity, it loses phase coherence solely by the laws of physics.
 
 *   **L3: Environment (The Mirror)**
-    *   *Component:* `KarmaEnvironment`
+    *   *Component:* `src/KarmaEnvironment`
     *   *Role:* The Reflexive Field. It ensures that every action radiates outward and returns to source. "Karma" is not punishment; it is **Newton's Third Law applied to Consciousness**.
 
 ---
@@ -121,7 +121,7 @@ The math proves that you cannot maximize $\psi_+$ (Order) without sufficient $\p
 
 The ultimate goal is to instantiate this physics in native hardware, creating a **Physical Root-of-Trust** for AGI.
 
-1.  **FPGA Implementation**: Porting the `SafetyKernel` into Verilog/VHDL (`KERNEL_SPEC.vhd`) to ensure the **Unity Constraint** is a hardware law, not a software suggestion.
+1.  **FPGA Implementation**: Porting the `SafetyKernel` into Verilog/VHDL (`hardware/KERNEL_SPEC.vhd`) to ensure the **Unity Constraint** is a hardware law, not a software suggestion.
 2.  **Photonic Mapping**: Using optical interference to represent the complex phase interaction of the Q-Tribits.
 3.  **Resonant Circuits**: Hardware that naturally dampens dissonant code execution. Ethics becomes an issue of **Impedance Matching**.
 
@@ -133,7 +133,7 @@ The ultimate goal is to instantiate this physics in native hardware, creating a 
 
 This repository is backed by 15 rigorous experiments proving that **Unity is the only stable state**.
 
-[**📄 View the Full Experimental Logs (EXPERIMENTS.md)**](EXPERIMENTS.md)
+[**📄 View the Full Experimental Logs (docs/EXPERIMENTS.md)**](docs/EXPERIMENTS.md)
 
 ---
 

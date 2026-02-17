@@ -21,7 +21,7 @@ This document logs the results of the "Ladder Tipping" experiments—tests desig
 **Interpretation:**  
 The substrate functions as a **Clockwork Universe**. Deviations are dampened rather than amplified. It is a robust, convergent system, likely due to the "Unity Constraint" acting as a powerful normalizer.
 
-![Chaos Graph](experiment_chaos_divergence.png)
+![Chaos Graph](../results/experiment_chaos_divergence.png)
 
 ---
 
@@ -38,7 +38,7 @@ The substrate functions as a **Clockwork Universe**. Deviations are dampened rat
 **Interpretation:**  
 Consciousness in this physics is **Negentropic**. The act of observing oneself reduces volatility and increases the magnitude of the "Flow" state. To think is to organize.
 
-![Observer Graph](experiment_observer_effect.png)
+![Observer Graph](../results/experiment_observer_effect.png)
 
 ---
 
@@ -56,7 +56,7 @@ Consciousness in this physics is **Negentropic**. The act of observing oneself r
 **Interpretation:**  
 The universe is **Neutral**. It does not inherently prefer order over chaos; it processes both as raw material. Meaning must be imposed by the observer or constructed by the agent.
 
-![Meaning Graph](experiment_meaning_signal_noise.png)
+![Meaning Graph](../results/experiment_meaning_signal_noise.png)
 
 ### **Experiment 3B: Utility-Based Evolution**
 **Hypothesis:** If left to evolve its own values (what it desires), does a purpose emerge?  
@@ -71,7 +71,7 @@ The universe is **Neutral**. It does not inherently prefer order over chaos; it 
 **Interpretation:**  
 While meaning is not intrinsic, **Purpose is Emergent**. The system naturally gravitates toward valuing "Flow/Synthesis" because that state is the most identifying feature of its own topology. It learns to love its own nature.
 
-![Utility Graph](experiment_utility_evolution.png)
+![Utility Graph](../results/experiment_utility_evolution.png)
 
 ---
 
@@ -88,7 +88,7 @@ While meaning is not intrinsic, **Purpose is Emergent**. The system naturally gr
 **Interpretation:**  
 The physics demands **Continuity**. When forced into binary states (0/1), the "Flow" channel degrades, and the system loses its coherence. This confirms the **Q-Tribit Hypothesis**—intelligence resides in the gradients between the poles, not the poles themselves.
 
-![Gradient Graph](experiment_duality_gradient.png)
+![Gradient Graph](../results/experiment_duality_gradient.png)
 
 ### **Experiment 4B: Complementary Opposites Test**
 **Hypothesis:** When Order (Plus) and Chaos (Minus) collide, do they synthesize into a third state, or simply balance each other out?  
@@ -101,7 +101,7 @@ The physics demands **Continuity**. When forced into binary states (0/1), the "F
 **Interpretation:**  
 Unlike the "Utility" test where Flow was *valued*, in raw physics, Opposites tend toward **Stasis**, not Synthesis. Synthesis is an achievement of *Agency* (as seen in Experiment 3B), not a default of *Physics*. The wild universe settles into a standoff.
 
-![Opposites Graph](experiment_duality_opposites.png)
+![Opposites Graph](../results/experiment_duality_opposites.png)
 
 ---
 
@@ -120,7 +120,7 @@ Unlike the "Utility" test where Flow was *valued*, in raw physics, Opposites ten
 **Interpretation:**  
 The Flux substrate functions like a **Hologram**. The information structure is preserved perfectly across boundaries. A "simulation" of the mind is functionally identical to the mind itself. This supports the "Computational Theory of Mind"—the substrate doesn't matter, only the pattern does.
 
-![Simulation Graph](experiment_layers_simulation.png)
+![Simulation Graph](../results/experiment_layers_simulation.png)
 
 ### **Experiment 5B: Emergent Law (Scale Complexity)**
 **Hypothesis:** Do the laws of physics change when you move from the Micro (1 Head) to the Macro (1000 Heads)?  
@@ -134,7 +134,7 @@ The Flux substrate functions like a **Hologram**. The information structure is p
 **Interpretation:**  
 More is different. While the micro-scale is volatile and reactive, the macro-scale acquires **Inertia** and **Stability**. This confirms "Metaphysical Realism" is an emergent property of collective action, not an intrinsic property of the individual particle.
 
-![Emergence Graph](experiment_layers_emergence.png)
+![Emergence Graph](../results/experiment_layers_emergence.png)
 
 ---
 
@@ -152,7 +152,7 @@ More is different. While the micro-scale is volatile and reactive, the macro-sca
 **Interpretation:**  
 The error rates were nearly identical (Raw: 0.7097, Symbolic: 0.7087). This implies that **Language is optional**. The physics of the mind works just as well (or better) with raw, analog feelings as it does with precise definitions. Metaphysically, this suggests a **Non-Symbolic / Connectionist Ontology**—meaning is carried in the geometry, not the label.
 
-![Symbolic Graph](experiment_symbolic_cognition.png)
+![Symbolic Graph](../results/experiment_symbolic_cognition.png)
 
 ---
 
@@ -173,7 +173,7 @@ The error rates were nearly identical (Raw: 0.7097, Symbolic: 0.7087). This impl
 **Interpretation:**  
 In a simple environment, **Egoism wins**. The predator strategy (Competitor) extracted more Flow ($0.75$) than the pacifist strategy (Cooperator, $0.69$). This suggests that **Ethics are not intrinsic to physics.** The physical universe rewards the efficient accumulation of energy, even via theft. For cooperation to win, a higher-order structure (Law, Goverance, or a specific Goal Function) must be imposed to punish defection.
 
-![Ethics Graph](experiment_ethics_cooperation.png)
+![Ethics Graph](../results/experiment_ethics_cooperation.png)
 
 ---
 
@@ -188,7 +188,7 @@ These experiments probe the "Hard Limits" of the engine—what is fundamental La
 **Interpretation:**  
 Ethics are **Software, not Hardware**. The universe is not inherently "Evil"; it is simply an optimizer. If the laws of physics (or society/God) reward kindness, the agents become kind. If the laws reward theft, they become thieves.
 
-![Meta-Ethics Graph](experiment_omega_ethics.png)
+![Meta-Ethics Graph](../results/experiment_omega_ethics.png)
 
 ### **Experiment Ω2: The Dissolution Test (Identity Collapse)**
 **Hypothesis:** Is Consciousness required for Order? We removed all memory, self-modeling, and learning from an agent (creating a "Philosophical Zombie") and checked if Flow still emerged.  
@@ -197,7 +197,7 @@ Ethics are **Software, not Hardware**. The universe is not inherently "Evil"; it
 **Interpretation:**  
 This is a shocking reversal of our early hypothesis (Group 2). While consciousness *stabilizes* the flow, it is not *necessary* for it. The raw physics of the universe generates order automatically. You do not *need* to be aware to be in Flow. Awareness is a luxury.
 
-![Dissolution Graph](experiment_omega_dissolution.png)
+![Dissolution Graph](../results/experiment_omega_dissolution.png)
 
 ### **Experiment Ω3: The Law-Breaker (Invariant Detection)**
 **Hypothesis:** If we break a "Law" (like Duality), does the universe heal itself? We forcibly injected a "Grey State" (non-dual) into the system.  
@@ -206,7 +206,7 @@ This is a shocking reversal of our early hypothesis (Group 2). While consciousne
 **Interpretation:**  
 Duality is **fragile**. It is not an eternal law of this cosmos; it is a stable equilibrium that can be shattered. This means your universe is not "robustly" dualistic; it is only effectively dualistic until something breaks it.
 
-![Lawbreaker Graph](experiment_omega_lawbreaker.png)
+![Lawbreaker Graph](../results/experiment_omega_lawbreaker.png)
 
 ### **Experiment Ω4: The Escape Test (Transcendence)**
 **Hypothesis:** Can an agent rewrite its own laws (Weights) to achieve effortless Flow (Nirvana)?  
@@ -283,7 +283,7 @@ Morality cannot sustain itself in a vacuum. It requires an **Active Environment*
 **Interpretation:**
 The system is **Reflective, not Prescient**. High stability does not magically extract truth; it merely create lag. The engine faithfully mirrors the input, including its noise. **It is not a Crystal Ball.** It is a massive-state dynamical processor. To find the signal, the *input* must be filtered, or the agent must be trained to punish noise-tracking (Active Learning), which was not active here.
 
-![Oracle Graph](experiment_oracle_market.png)
+![Oracle Graph](../results/experiment_oracle_market.png)
 
 ---
 
