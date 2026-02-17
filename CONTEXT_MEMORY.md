@@ -32,7 +32,17 @@ The truths below are **Non-Negotiable**.
 
 ### 1. The Q-Tribit (The Atom)
 We do not use binary bits (0/1). We use **Continuous Q-Tribits**.
-*   **Dipole Structure:** Information is a magnetic field spanning **+1 (Assert)** to **-1 (Negate)**, with **0 (Superconducting Bridge)** in the center.
+
+**CRITICAL DISTINCTION (2026 Landscape):**
+Do not confuse our **Flux Q-Tribit** with the generic "Qutrit" often referenced in quantum computing.
+*   **Standard Qutrit:** A generic 3-level system, typically unipolar indices $|0\rangle, |1\rangle, |2\rangle$ (three energy levels stacked vertically).
+*   **Flux Q-Tribit:** A specific **Topological Bipolarity** centered on symmetry ($|-1\rangle, |0\rangle, |+1\rangle$).
+    *   $|-1\rangle$: Negative Flux / Receive
+    *   $|0\rangle$: Neutral Point of Symmetry (The Superconducting Bridge)
+    *   $|+1\rangle$: Positive Flux / Transmit
+
+The "0" here is not an initial state or "off" switch; it is the **Resonant Center** of the dipole.
+
 *   **Continuum:** States exist *everywhere* between these poles.
 *   **Interaction:** Thoughts naturally attract or repel based on polarity. We do not process data; we modulate **Flow**.
 

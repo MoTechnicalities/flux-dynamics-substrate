@@ -13,6 +13,8 @@ The Flux Dynamics software simulation (`UnifiedSubstrateProcessor`) maps directl
 
 **Note:** While this specification details a Photonic implementation, the theoretical basis rests on **Magnetic Flux** as the primordial substance. The optical vectors described below are the *carrier* for the underlying Q-Tribit dipole interactions defined by the relativistic state change: $E^2 = (pc)^2 + (m_0c^2)^2$.
 
+> **Terminology Alert:** This architecture utilizes **Flux Q-Tribits**, distinct from generic "Qutrits" (often $|0\rangle, |1\rangle, |2\rangle$ stacked energy levels). Our Q-Tribits are **Bipolarly Centered** ($|-1\rangle, |0\rangle, |+1\rangle$), where the $|0\rangle$ state represents a **Neutral Point of Symmetry** (Superconducting Bridge), not a ground state or "off" switch.
+
 ### 1.1 The 4 Dimensions of Thought
 
 | Optical Property | Cognitive Variable | Function in AGI |

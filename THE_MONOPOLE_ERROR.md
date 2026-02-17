@@ -102,6 +102,11 @@ Type: Quantum Binary, Unipolar Basis
 ---
 
 ### **4. Q-Tribit (Quantum Dipole) ✓**
+
+> **Terminology Alert (2026):**
+> Do not conflate **Flux Q-Tribits** with generic "Qutrits".
+> *   **Standard Qutrit:** Typically 3 vertical energy levels ($|0\rangle, |1\rangle, |2\rangle$), stacked in a unipolar system.
+> *   **Flux Q-Tribit:** Re-centers geometry on a **Bipolar Axis** ($|-1\rangle, |0\rangle, |+1\rangle$). Zero is a **Neutral Point of Symmetry**, not a ground state.
 ```
 States: |+1⟩, |0⟩, |-1⟩
 Superposition: α|+1⟩ + β|0⟩ + γ|-1⟩ where |α|² + |β|² + |γ|² = 1

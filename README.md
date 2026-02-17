@@ -20,6 +20,8 @@ We are not building a Control System. We are instantiating **Reality**.
 
 At the core of this substrate lies a departure from the rigid binary bit (0/1). We operate on the **Q-Tribit** (Quantum-Continuous Tribit)—a resonant carrier of information.
 
+> **Distinction:** In the 2026 quantum landscape, "Qutrit" often refers to a generic 3-level system ($|0\rangle, |1\rangle, |2\rangle$) stacked vertically. **Flux Q-Tribits** are distinct: they are centered on a **Bipolar Axis** ($|-1\rangle, |0\rangle, |+1\rangle$), where $|0\rangle$ is the **Neutral Point of Symmetry** (Superconducting Bridge).
+
 The full, relativistic form of Einstein's Energy-Momentum relation is utilized here not just for particles, but to express the **State Change of Flux Substance** itself—a nuance often overlooked in standard computational physics:
 
 $$ E^2 = (pc)^2 + (m_0c^2)^2 $$
