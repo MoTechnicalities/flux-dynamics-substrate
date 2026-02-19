@@ -15,15 +15,25 @@ As the AI industry hits the asymptote of Large Language Model (LLM) scaling, the
 
 The core innovation of Flux Dynamics is the rejection of the "Neuron" in favor of the "Wave." Intelligence is modeled as a dynamic interference pattern within a Unified Field.
 
-### 2.1 The Flux Q-Tribit State Vector
-The fundamental unit of the substrate is a normalized complex 3-vector $\Psi$, representing the dialectic state of an agent. Unlike a generic "Qutrit" (unipolar 0,1,2), this vector operates on a **Bipolar Axis**:
+### 2.1 The Flux Q-Tribit (TriQbit) State Vector
+
+The fundamental unit of the substrate is not a scalar point, but a **Hierarchical Tensor Product** of three flux modes existing at different scales (Micro-Knot, Meso-Wave, Macro-Vortex):
+
+$$ \text{TriQbit} = K_{\text{micro}} \otimes W_{\text{meso}} \otimes L_{\text{macro}} $$
+
+Unlike a generic "Qutrit" (unipolar 0,1,2), this system operates on a **Bipolar Axis** with internal hydrodynamics (Flow, Spin, Mass) derived directly from the flux density $\rho(\mathbf{x}, t)$ and internal velocity $\mathbf{v}(\mathbf{x}, t)$.
+
+[**🌊 Read the Deep Physics: TriQbit Formalism**](TriQbit_Formalism.md)
+
+**The Simplified State Vector ($\Psi$):**
+For high-level logic, we often project this complex tensor down to a normalized 3-vector $\Psi$:
 
 $$
 \Psi = \begin{bmatrix}
 \psi_+ \\
 \psi_- \\
 \psi_0
-\end{bmatrix} \in \mathbb{C}^3, \quad \text{where } |\psi_+|^2 + |\psi_-|^2 + |\psi_0|^2 = 1
+\end{bmatrix} \in \mathbb{C}^3
 $$
 
 *   **$\psi_+$ (Plus/Tradition):** Represents invariance, establishment, dogma, and structural stability.

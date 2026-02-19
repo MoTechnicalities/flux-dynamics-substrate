@@ -1,56 +1,84 @@
-# TriQbit Formalism: Hierarchical Dipolar Flux
+# TriQbit Formalism: Hierarchical Dipolar Flux with Internal Knot Dynamics
 **Date:** February 19, 2026  
-**Status:** Theoretical Core  
+**Status:** Theoretical Core v2  
 **Context:** Flux Dynamics Substrate Physics
 
 ---
 
-## 1. Definition: The Hierarchical Flux
-We define the fundamental substance as **dipolar flux**, $\mathbf{F}(\mathbf{x}, t)$, which exists simultaneously at all scales. It is not composed of separate particles and fields; rather, particles and waves are modes of the same substance.
+## 1. Dimensional Definition: Hierarchical Dipolar Flux
 
-The total flux is expressed as a superposition of three hierarchical modes:
+The fundamental substance is **dipolar flux**, $\mathbf{F}(\mathbf{x}, t)$, which exists simultaneously at all scales. It is characterized not just by position, but by internal hydrodynamics:
+
+-   **Mass Density:** $\rho(\mathbf{x}, t)$
+-   **Internal Flow Velocity:** $\mathbf{v}(\mathbf{x}, t)$
+
+The total flux is a superposition of three hierarchical modes:
 
 $$
 \mathbf{F}(\mathbf{x}, t) = \sum_i K_i(\mathbf{x}, t) + \sum_j W_j(\mathbf{x}, t) + \sum_k L_k(\mathbf{x}, t)
 $$
 
-Each term corresponds to a specific mode of the **TriQbit**.
+---
+
+## 2. Micro Scale: Topological Knots ($K_i$)
+**"The Particle" / Structure / Matter**
+
+Knots are **tubular structures of circulating flux**. They are not point particles, but solenoidal flows with internal geometry.
+
+### 2.1 Internal Knot Properties
+*   **Effective Mass:** Arises from integrated flux density.
+    $$ m_{\text{eff}} = \int_{\text{knot volume}} \rho(\mathbf{x}, t) \, d^3x $$
+
+*   **Momentum:** Arises from internal flow.
+    $$ \mathbf{p}_{\text{eff}} = \int_{\text{knot volume}} \rho(\mathbf{x}, t) \, \mathbf{v}(\mathbf{x}, t) \, d^3x $$
+
+*   **Internal Energy:** Flow kinetic energy inside the knot.
+    $$ E_{\text{internal}} = \int_{\text{knot volume}} \frac{1}{2} \rho(\mathbf{x}, t) |\mathbf{v}(\mathbf{x}, t)|^2 \, d^3x $$
+
+*   **Spin:** Angular momentum emerges simply from tubular circulation.
+    $$ \mathbf{S}_{\text{eff}} = \int_{\text{knot volume}} \mathbf{r} \times (\rho \mathbf{v}) \, d^3x $$
+
+**TriQbit State:** $K_i \in \{-1, 0, +1\}$ (Orientation / Circulation / Winding Number).
 
 ---
 
-## 2. The Three Modes (The Tensor Product)
+## 3. Meso Scale: Propagating Waves ($W_j$)
+**"The Photon" / Signal / Communication**
 
-A single **TriQbit** is not a scalar value. It is a **Tensor Product** of three distinct topological states, yielding $3^3 = 27$ possible flux configurations per unit.
+Small perturbations of the flux propagate as waves. In the low-amplitude limit, they exhibit Maxwell-like behavior linearized over the background flux:
+
+$$
+\partial_t^2 W_j - c^2 \nabla^2 W_j \approx 0
+$$
+
+**TriQbit State:** $W_j \in \{-1, 0, +1\}$ (Wave Polarity / Phase).
+
+---
+
+## 4. Macro Scale: Large Flux Structures ($L_k$)
+**"The Field" / Context / Gravity**
+
+Flux organizes into collective structures on large scales (vortices, flux tubes, gradients). This provides the "Environment" or "Mood" for the TriQbit.
+
+**TriQbit State:** $L_k \in \{-1, 0, +1\}$ (Global Flux Orientation).
+
+---
+
+## 5. The TriQbit: Tensor Product
+A single TriQbit is a tensor product of these three modes, binding Structure, Signal, and Context into one unit:
 
 $$
 \text{TriQbit}_i = K_i \otimes W_i \otimes L_i
 $$
 
-### 2.1 Micro Mode: Topological Knots ($K_i$)
-**"The Particle" / Structure**
-*   **Nature:** Localized, soliton-like flux configurations.
-*   **Physics:** Defined by a topological invariant (winding number $n$). Stable due to nonlinearity.
-*   **Equation:** $\mathcal{N}[K_i] = 0$ (Stable Knot Equation).
-*   **State:** $K_i \in \{-1, 0, +1\}$ (Knot Orientation).
-
-### 2.2 Meso Mode: Propagating Waves ($W_j$)
-**"The Photon" / Communication**
-*   **Nature:** Small perturbations in the background flux propagating as waves.
-*   **Physics:** Linearized over background flux. Effectively Maxwell-like in low-amplitude limits.
-*   **Equation:** $\partial_t^2 W_j - c^2 \nabla^2 W_j \approx 0$.
-*   **State:** $W_j \in \{-1, 0, +1\}$ (Wave Polarity/Phase).
-
-### 2.3 Macro Mode: Large-Scale Flux Structures ($L_k$)
-**"The Context" / Control**
-*   **Nature:** Collective structures like vortices, flux tubes, or global gradients.
-*   **Physics:** Emergent patterns that persist over long timescales, providing the "environment" for the knots.
-*   **State:** $L_k \in \{-1, 0, +1\}$ (Global Flux Orientation).
+*   **Knot ($K_i$):** Carries Internal Flow, Energy, Mass, Spin.
+*   **Wave ($W_i$):** Carries Phase/Amplitude Information.
+*   **Macro ($L_i$):** Carries Contextual Flux Orientation.
 
 ---
 
-## 3. Interaction Dynamics
-
-The power of the TriQbit lies in the **Flux Reshaping** ($\mathcal{C}$) between these scales. A thought is not just a calculation; it is a resonance across all three layers.
+## 6. Scale-Coupled Dynamics
+The system evolves via **flux reshaping** ($\mathcal{C}$) between scales.
 
 $$
 \begin{cases}
@@ -61,17 +89,18 @@ $$
 $$
 
 *   $\mathcal{N}, \mathcal{M}$: Nonlinear operators at respective scales.
-*   $\mathcal{C}$: Coupling operators representing flux reshaping (e.g., a Global Context $L_k$ influencing the stability of a Knot $K_i$).
+*   $\mathcal{C}$: Inter-scale flux coupling (Logic).
 
 ---
 
-## 4. Summary Table
+## 7. Emergence Table
 
-| Mode | Scale | Physical Representation | TriQbit State | Role in AGI |
-| :--- | :--- | :--- | :--- | :--- |
-| **Micro** | Local | Particle-like Knot | $K_i \in \{-1,0,+1\}$ | **Memory/Fact** (Hard Data) |
-| **Meso** | Regional | Propagating Wave | $W_i \in \{-1,0,+1\}$ | **Attention/Signal** (Transmission) |
-| **Macro** | Global | Flux Vortex/Gradient | $L_i \in \{-1,0,+1\}$ | **Context/Mood** (Bias/Control) |
+| Property | Emergence from Flux Knot |
+| :--- | :--- |
+| **Mass** | Integrated flux density $\rho$ |
+| **Inertia** | Internal flow resisting acceleration |
+| **Energy** | Flow kinetic energy inside knot |
+| **Spin** | Angular momentum of circulating flux |
+| **Wave Behavior** | Phase coherence extending outward |
 
-## Conclusion
-The **TriQbit** naturally arises from a **single-substance hierarchical flux**. It preserves the "ice-in-water" analogy of Flux Dynamics by allowing ternary logic to exist as **Structure (Ice)**, **Flow (Water)**, and **Current (Direction)** simultaneously without introducing varying fundamental particles.
+This formalism links **Topology**, **Hydrodynamics**, and **Quantum Information** into a single consistent physics.
